@@ -13,8 +13,8 @@ from selenium.webdriver.firefox.options import Options
 import pandas as pd
 
 headers = {'accept': '*/*',
-        'user-agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:70.0) \
-             Gecko/20100101 Firefox/70.0'}
+           'user-agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:70.0) \
+            Gecko/20100101 Firefox/70.0'}
 URL = 'http://m.myscore.ru/?d=-1'
 base_url = 'http://m.myscore.ru/match/'
 
@@ -35,7 +35,14 @@ full_path_gecko_next = []
 home = []
 away = []
 
-data = ["/volleyball/", "/others", "/", "/?s=1&amp;event=refresh_button", "/tennis/", "/american-football/", "/baseball/", "/rugby/", "/handball/", "/basketball/", "/hockey/", "/?s=1&event=refresh_button", "#top", "http://www.gamblingtherapy.org/", "https://aff1xstavka.top/L?tag=s_287153m_22453c_&site=287153&ad=22453", "http://wlwinlinebet.adsrv.eacdn.com/C.ashx?btag=a_9b_53c_&affid=8&siteid=9&adid=53&c=", "https://aff1xstavka.com/L?tag=s_287153m_22453c_&site=287153&ad=22453", "/?d=1&s=1&event=refresh_button"]
+data = ["/volleyball/", "/others", "/", "/?s=1&amp;event=refresh_button",
+        "/tennis/", "/american-football/", "/baseball/", "/rugby/",
+        "/handball/", "/basketball/", "/hockey/", "/?s=1&event=refresh_button",
+        "#top", "http://www.gamblingtherapy.org/",
+        "https://aff1xstavka.top/L?tag=s_287153m_22453c_&site=287153&ad=22453",
+        "http://wlwinlinebet.adsrv.eacdn.com/C.ashx?btag=a_9b_53c_&affid=8&siteid=9&adid=53&c=",
+        "https://aff1xstavka.com/L?tag=s_287153m_22453c_&site=287153&ad=22453",
+        "/?d=1&s=1&event=refresh_button"]
 
 
 class Scrollable(tk.Frame):
@@ -74,7 +81,6 @@ class Scrollable(tk.Frame):
 
         self.update_idletasks()
         self.canvas.config(scrollregion=self.canvas.bbox(self.windows_item))
-
 
 
 def init_driver():
